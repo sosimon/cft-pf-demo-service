@@ -22,6 +22,10 @@ variable "credentials_path" {
   description = "Service account json auth path"
 }
 
+variable "project_name" {
+  description = "Name of the service project to be created"
+}
+
 variable "organization_id" {
   description = "The organization id for the associated services"
 }

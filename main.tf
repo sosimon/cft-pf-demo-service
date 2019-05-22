@@ -44,10 +44,10 @@ provider "gsuite" {
 }
 
 module "project-factory" {
-  source             = "terraform-google-modules/project-factory/google"
-  version            = "0.3.0"
+  source             = "terraform-google-modules/project-factory/google//modules/gsuite_enabled"
+  version            = "2.1.3"
   random_project_id  = "true"
-  name               = "sso-cft-pf-demo-service"
+  name               = "${var.project_name}"
   org_id             = "${var.organization_id}"
   billing_account    = "${var.billing_account}"
   credentials_path   = "${local.credentials_file_path}"

@@ -1,0 +1,32 @@
+admin_email = "simonso@foobar.org"
+
+organization_id = 123456789012
+
+billing_account = "000000-000000-000000"
+
+credentials_path = "./credentials.json"
+
+project_name = "sso-cft-pf-demo-service"
+
+project_group_name = "sso-cft-pf-demo-service-project-owners"
+
+project_group_owner = "simonso@foobar.org"
+
+shared_vpc_project = "sso-cft-pf-demo-host-1a13"
+
+shared_vpc_subnets = [
+  "projects/sso-cft-pf-demo-host-1a13/regions/us-west1/subnetworks/us-west1",
+  "projects/sso-cft-pf-demo-host-1a13/regions/us-east1/subnetworks/us-east1",
+  "projects/sso-cft-pf-demo-host-1a13/regions/europe-west1/subnetworks/europe-west1",
+]
+
+activate_apis = [
+  "compute.googleapis.com",
+  "servicemanagement.googleapis.com",
+  "storage-api.googleapis.com",
+  "stackdriver.googleapis.com",
+  "logging.googleapis.com",
+  "cloudresourcemanager.googleapis.com",
+  "iam.googleapis.com",
+  "dataproc.googleapis.com",
+]
