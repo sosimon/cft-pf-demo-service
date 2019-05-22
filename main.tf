@@ -14,6 +14,17 @@
  * limitations under the License.
  */
 
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "slalomsv"
+
+    workspaces {
+      name = "gcp-cft-pf-demo-service"
+    }
+  }
+}
+
 locals {
   credentials_file_path = "${var.credentials_path}"
 }
