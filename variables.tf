@@ -46,3 +46,8 @@ variable "shared_vpc_subnets" {
   type        = "list"
   description = "List of subnetworks in shared VPC"
 }
+
+variable "activate_apis" {
+  description = "The list of apis to activate within the project"
+  type        = "list"
+}
