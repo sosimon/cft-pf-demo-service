@@ -70,23 +70,6 @@ module "project-factory" {
   activate_apis      = "${var.activate_apis}"
 }
 
-/*
-1. Create a new GCP project using the project_name.
-2. If a shared VPC is specified, attach the new project to the shared_vpc.
-   It will also give the following users network access on the specified subnets:
-    - The prroject's new default service account (see step 4)
-    - The Google API service account for the project
-    - The project controlling group specified in group_name
-3. Delete the default compute service account.
-4. Create a new default service account for the project.
-    - Give it access to the shared VPC (to be able to launch instances).
-5. Attach the billing account (billing_account) to the project.
-6. Create a new Google Group for the project (group_name) if create_group is true.
-7. Give the controlling group access to the project, with the group_role.
-8. Enable the required and specified APIs (activate_apis).
-9. Delete the default network.
-*/
-
 resource "gsuite_group_member" "group_owner" {
   group = "${module.project-factory.group_email}"
   email = "${var.project_group_owner}"
